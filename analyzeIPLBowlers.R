@@ -1,0 +1,56 @@
+#########################################################################################################
+#
+# Title : 
+# Designed and developed by: Tinniam V Ganesh
+# Date : 28 Nov 2015
+# File: analyzeIPLBowlers.R
+# More details: https://gigadom.wordpress.com/
+#
+#########################################################################################################
+
+analyzeIPLBowlers <- function(IPLBowler,func) {
+    
+    
+    
+    
+    
+    # Check and get the team indices of IPL teams in which the bowler has played
+    i <- getTeamIndex_bowler(IPLBowler)
+    
+    # Get the team names
+    teamNames <- getTeams(i)
+    # Check if file exists in the directory. This check is necessary when moving between matchType
+    
+    bowlerDF <- NULL
+    # Create a consolidated Data frame of batsman for all IPL teams played
+    for (i in seq_along(teamNames)){
+          df <- getBowlerWicketDetails(team=teamNames[i],name=IPLBowler,dir="./data")
+          bowlerDF <- rbind(bowlerDF,df) 
+    }
+ 
+    if(func == "Mean Economy Rate of bowler"){
+        bowlerMeanEconomyRate(bowlerDF,IPLBowler)
+    } else if (func == "Mean runs conceded by bowler"){
+        bowlerMeanRunsConceded(bowlerDF,IPLBowler)
+    }     else if (func == "Bowler's Moving Average"){
+        bowlerMovingAverage(bowlerDF,IPLBowler)
+    } else if (func == "Bowler's Cumulative Avg. Wickets"){
+        bowlerCumulativeAvgWickets(bowlerDF,IPLBowler)
+    } else if (func == "Bowler's Cumulative Avg. Econonmy Rate"){
+        bowlerCumulativeAvgEconRate(bowlerDF,IPLBowler)
+    } else if (func == "Bowler's Wicket Plot"){
+        bowlerWicketPlot(bowlerDF,IPLBowler)
+    } else if (func == "Bowler's Wickets against opposition"){
+        bowlerWicketsAgainstOpposition(bowlerDF,IPLBowler)
+    } else if (func == "Bowler's Wickets ar Venues"){
+        bowlerWicketsVenue(bowlerDF,IPLBowler)
+    } else if (func == "Bowler's wickets prediction"){
+        bowlerWktsPredict(bowlerDF,IPLBowler)
+    }
+    
+    
+    
+    
+   
+}
+
