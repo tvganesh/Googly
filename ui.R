@@ -2,7 +2,7 @@
 #
 # Title :  Googly - An interactive app to analyze IPL Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 24 Dec 2016
+# Date : 25 Dec 2016
 # File: ui.R
 # More details: https://gigadom.wordpress.com/
 #
@@ -13,15 +13,11 @@ source("funcs.R")
 
 
 shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
-                   
                    # Batsman tab
-                   
                    tabPanel("IPL batsman",
                             sidebarPanel(
                                 selectInput('batsmanFunc', 'Select function', IPLBatsmanFuncs),
                                 selectInput('batsman', 'Select batsman', IPLBatsmen,selectize=FALSE, size=20)
-                                
-                                
                             ),
                             mainPanel(
                                 plotOutput('batsmanPlot'),
@@ -32,9 +28,7 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                                 )
                             )
                             
-                            
                    ),
-                   # Bowlers tab
                    # Bowlers tab
                    tabPanel("IPL bowlers",
                             # Application title
@@ -55,18 +49,14 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                                 )
                             )
                             
-                            
                    ),
                    # Analyze IPL matches
                    tabPanel("IPL matches",
-                            # Application title
                             headerPanel('Analyze an IPL match'),
-                            
                             sidebarPanel(
                                 selectInput('matchFunc', 'Select match function', IPLMatchFuncs),
                                 selectInput('match', 'Select IPL match ', IPLMatches,selectize=FALSE, size=20),
                                 uiOutput("selectTeam")
-                                
                                 
                             ),
                             mainPanel(
@@ -79,18 +69,12 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                             )
                             
                    ),
-                
-                   
                    # Analyze 2 Teams IPL matches
                    tabPanel("Head to head",
-                            
                             headerPanel('Head-to-head between 2 IPL teams'),
-                            
                             sidebarPanel(
                                 selectInput('matches2TeamFunc', 'Select function', IPLMatches2TeamsFuncs),
-                                selectInput('match2', 'Select matches', IPLMatches2Teams,selectize=FALSE, size=20),
-                                uiOutput("selectTeam2")
-                                
+                                selectInput('match2', 'Select matches', IPLMatches2Teams,selectize=FALSE, size=20),                                uiOutput("selectTeam2")
                                 
                             ),
                             mainPanel(
@@ -101,19 +85,15 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                                        tags$h6("Data source Cricsheet: http://cricsheet.org/")
                                 )
                             ) 
-                            
+                           
                    ),
                    # Analyze IPL Team Overall Perf
                    tabPanel("Overall Performance",
-                            
                             headerPanel("Analyze IPL team's overall performance"),
-                            
                             sidebarPanel(
                                 selectInput('overallperfFunc', 'Select function', IPLTeamOverallPerfFunc),
                                 selectInput('teamMatches', 'Select the team', IPLTeamsAll,selectize=FALSE, size=13),
                                 uiOutput("Rank")
-                                
-                                
                             ),
                             mainPanel(
                                 plotOutput('IPLTeamPerfOverall'),
@@ -124,19 +104,16 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                                 )
                             ) 
                             
-                            
                    ),
-                   
                   
                    tabPanel("About",
-                            h2("Sixer - cricketr's Shiny avatar"),
-                            p("This Shiny app is based on the R package 'cricketr'. In this Shiny app, I use  the
-                    cricketr package to analyze the performances of cricketers. cricketr can analyze batsman
-                    and bowlers in all formats of the game namely Test, ODI and Twenty20."),
-                            p("The R package 'cricketr' has been authored by Tinniam V Ganesh for analyzing  performances of cricketers
-                    based on ESPN Cricinfo's Statsguru"),
-                            p("This Shiny app 'Sixer' has been designed and developed by  Tinniam V Ganesh, Nov 2015"),
-                            p("The data for this Shiny app has been taken from ESPN Cricinfo - http://www.espncricinfo.com/ci/content/stats/index.html"),
+                            h3("Googly - Analyzing IPL Players, teams and matches"),
+                            p("This Shiny app is based on my R package 'yorkr'. In this Shiny app, I use  the
+                    yorkr package to analyze the performances of IPL cricketers,teams, matches."),
+                            p("The R package 'yorkr' has been authored by Tinniam V Ganesh for analyzing  performances of IPL cricketers
+                    teams, individudal IPL match, head-to-head and IPL teamds"),
+                            p("This Shiny app 'Googly' has been designed and developed by  Tinniam V Ganesh, Dec 25 2016"),
+                            p("The data for this Shiny app has been taken from Cricsheet - http://http://cricsheet.org/"),
                             p("More details about this app and for other posts, see my blog
                     http://gigadom.wordpress.com/")
                    )

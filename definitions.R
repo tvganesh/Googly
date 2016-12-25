@@ -1,13 +1,13 @@
 #########################################################################################################
 #
-# Title : Sixer - cricketr's Shiny avatar
+# Title :  Googly - An interactive app to analyze IPL Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 28 Nov 2015
+# Date : 25 Dec 2016
 # File: definitions.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
-# Function names for Test  batsman analysis
+# Function names for IPL  batsman analysis
 IPLBatsmanFuncs <- c("Batsman Runs vs. Deliveries",
                        "Batsman's Fours & Sixes",
                        "Dismissals of batsman",
@@ -21,7 +21,7 @@ IPLBatsmanFuncs <- c("Batsman Runs vs. Deliveries",
 
 
 
-# Function names for Test bowler analysis
+# Function names for IPL bowler analysis
 IPLBowlerFuncs <- c("Mean Economy Rate of bowler",
                      "Mean runs conceded by bowler",
                      "Bowler's Moving Average",
@@ -34,8 +34,7 @@ IPLBowlerFuncs <- c("Mean Economy Rate of bowler",
 
 
 # Functions to analyze IPL matches
-IPLMatchFuncs <- c("Match Batting Scorecard",
-                   "Batting Partnerships",
+IPLMatchFuncs <- c("Batting Partnerships",
                    "Batsmen vs Bowlers",
                    'Bowling Scorecard',
                    "Bowling Wicket Kind",
@@ -48,7 +47,6 @@ IPLMatchFuncs <- c("Match Batting Scorecard",
 # Functions to analyze IPL matches
 IPLMatches2TeamsFuncs <- c("Team Batsmen Batting Partnerships All Matches",
                    "Team Batsmen vs Bowlers all Matches",
-                   'Team Bowling Performance All Matches',
                    "Team Wickets Opposition All Matches",
                    "Team Bowler vs Batsmen All Matches",
                    "Team Bowlers Wicket Kind All Matches",
@@ -61,6 +59,7 @@ IPLTeamOverallPerfFunc <- c("Team Batsmen Partnerships Overall",
                            'Team Bowler vs Batsmen Overall',
                            "Team Bowler Wicket Kind Overall")
 
+# IPL Team names
 IPLTeamNames <- list("Chennai Super Kings","Deccan Chargers", "Delhi Daredevils","Kings Xi Punjab", 
                   "Kochi Tuskers Kerala","Kolkata Knight Riders","Mumbai Indians","Pune Warriors",
                   "Rajasthan Royals","Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",

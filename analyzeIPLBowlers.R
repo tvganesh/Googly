@@ -1,19 +1,15 @@
 #########################################################################################################
 #
-# Title : 
+# Title :  Googly - An interactive app to analyze IPL Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 28 Nov 2015
+# Date : 25 Dec 2016
 # File: analyzeIPLBowlers.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
-
+# Analyze IPL bowlers
 analyzeIPLBowlers <- function(IPLBowler,func) {
-    
-    
-    
-    
-    
+  
     # Check and get the team indices of IPL teams in which the bowler has played
     i <- getTeamIndex_bowler(IPLBowler)
     
@@ -28,6 +24,7 @@ analyzeIPLBowlers <- function(IPLBowler,func) {
           bowlerDF <- rbind(bowlerDF,df) 
     }
  
+    # Call the necessary function
     if(func == "Mean Economy Rate of bowler"){
         bowlerMeanEconomyRate(bowlerDF,IPLBowler)
     } else if (func == "Mean runs conceded by bowler"){
@@ -47,10 +44,6 @@ analyzeIPLBowlers <- function(IPLBowler,func) {
     } else if (func == "Bowler's wickets prediction"){
         bowlerWktsPredict(bowlerDF,IPLBowler)
     }
-    
-    
-    
-    
-   
+
 }
 

@@ -1,3 +1,13 @@
+#########################################################################################################
+#
+# Title :  Googly - An interactive app to analyze IPL Players, teams and matches 
+# Designed and developed by: Tinniam V Ganesh
+# Date : 25 Dec 2016
+# File: funcs.R
+# More details: https://gigadom.wordpress.com/
+#
+#########################################################################################################
+# Get all the IPL batsmen
 getBatsmen <- function(df){
     bmen <- df %>% distinct(batsman) 
     bmen <- as.character(bmen$batsman)
@@ -8,7 +18,7 @@ find1 <- function(x, a){
     which(x==a)
 }
 
-
+# Find out the indices of the teams in which the batsman has played
 getTeamIndex <- function(batsman){
     setwd("./data")
     load("csk.RData")
@@ -35,11 +45,11 @@ getTeamIndex <- function(batsman){
         
         if(length(a) != 0)
             b <- c(b,i)
-        
     }
     b
 }
 
+# Get the list of the IPL team names from the indices passed
 getTeams <- function(x){
    
     l <- NULL
@@ -53,13 +63,14 @@ getTeams <- function(x){
 }
 
 
-
+# Get all IPL bowlers
 getBowlers <- function(df){
     bwlr <- df %>% distinct(bowler) 
     bwlr <- as.character(bwlr$bowler)
     bowler <- sort(bwlr)
 }
 
+# Get the team indices of IPL teams for which the bowler as played
 getTeamIndex_bowler <- function(bowler){
     # Load IPL Bowlers
     setwd("./data")

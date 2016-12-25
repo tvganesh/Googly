@@ -1,13 +1,13 @@
 #########################################################################################################
 #
-# Title : 
+# Title :  Googly - An interactive app to analyze IPL Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 28 Nov 2015
-# File: analyzeIPLBowlers.R
+# Date : 25 Dec 2016
+# File: analyzeIPLBatsmen.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
-
+#Analyze an IPL match
 analyzeIPLMatches <- function(match,matchFunc,team,opposition) {
 
     # Check and get the team indices of IPL teams in which the bowler has played
@@ -18,7 +18,7 @@ analyzeIPLMatches <- function(match,matchFunc,team,opposition) {
     print(matchFunc)
     print(dim(matchDF))
     print(team)
-    
+    # Call necessary function
     if(matchFunc == "Match Batting Scorecard"){
         teamBattingScorecardMatch(matchDF,team)
     } else if (matchFunc == "Batting Partnerships"){
@@ -38,8 +38,7 @@ analyzeIPLMatches <- function(match,matchFunc,team,opposition) {
     } else if (matchFunc == "Match Worm Graph"){
         matchWormGraph(matchDF,team,opposition)
     }
-    
-    
+
     
 }
 

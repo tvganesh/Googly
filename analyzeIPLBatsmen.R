@@ -1,18 +1,16 @@
 #########################################################################################################
 #
-# Title : Sixer - cricketr's Shiny avatar
+# Title :  Googly - An interactive app to analyze IPL Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 28 Nov 2015
-# File: analyzeIPLBatsman.R
+# Date : 25 Dec 2016
+# File: analyzeIPLBatsmen.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
 
+# Analyze IPL batsmen
 analyzeIPLBatsmen <- function(IPLBatsman,func) {
-    
-   
-   
-    print(IPLBatsman)
+   print(IPLBatsman)
     
     # Return when name is NULL at start
     if(is.null(IPLBatsman))
@@ -31,7 +29,7 @@ analyzeIPLBatsmen <- function(IPLBatsman,func) {
           df <- getBatsmanDetails(team=teamNames[i],name=IPLBatsman,dir="./data")
           batsmanDF <- rbind(batsmanDF,df) 
     }
- 
+    # Call the approporiate function
     if(func == "Batsman Runs vs. Deliveries"){
         batsmanRunsVsDeliveries(batsmanDF,IPLBatsman)
     } else if (func == "Batsman's Fours & Sixes"){
@@ -53,8 +51,6 @@ analyzeIPLBatsmen <- function(IPLBatsman,func) {
     } else if (func == "Predict Runs of batsman"){
         batsmanRunsPredict(batsmanDF,IPLBatsman)
     } 
-    
-    
    
 }
 
