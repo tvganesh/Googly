@@ -7,8 +7,8 @@ IPLBowlers <-b
 a <-list.files("IPLmatches/")
 IPLMatches <- gsub(".RData","",a)
 
-a <-list.files("IPLMatches2teams/")
-IPLMatches2Teams <- gsub(".RData","",a)
+a1 <-list.files("IPLMatches2Teams/")
+IPLMatches2Teams <- gsub(".RData","",a1)
 
-a <-list.files("allMatchesallOppn/")
-IPLTeamsAll <- gsub(".RData","",a)
+a2 <-list.files("allMatchesallOppn/")
+IPLTeamsAll <- gsub(".RData","",a2)

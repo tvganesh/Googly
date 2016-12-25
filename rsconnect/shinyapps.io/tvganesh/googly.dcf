@@ -1,9 +1,9 @@
 name: googly
 account: tvganesh
 server: shinyapps.io
-appId: 147266
-bundleId: 660001
+appId: 147338
+bundleId: 660359
 url: https://tvganesh.shinyapps.io/googly/
-when: 1482587847.19399
+when: 1482661470.64699
 asMultiple: FALSE
 asStatic: FALSE

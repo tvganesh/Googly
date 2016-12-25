@@ -10,6 +10,8 @@
 library(shiny)
 library(yorkr)
 library(rpart)
+library(dplyr)
+library(ggplot2)
 library(rpart.plot)
 
 # Source files
@@ -23,12 +25,11 @@ source("analyzeIPLMatches2Teams.R")
 source("analyzeIPLTeamPerfOverall.R")
 shinyServer(function(input, output,session) {
     
-    IPLBatsmen <-b
     #analyzeIPLBatsmen(input$batsman,input$batsmanFunc)
     # Analyze and display batsmen plots
     output$batsmanPlot <- renderPlot({  
         #Load IPL Batsmen
-       
+        
         # Load all IPL batsmen
         analyzeIPLBatsmen(input$batsman,input$batsmanFunc)
         
@@ -45,7 +46,7 @@ shinyServer(function(input, output,session) {
         m <- strsplit(as.character(input$match),"-")
         print(m[[1]][1])
         print(m[[1]][2])
-       
+        
         teams <- c(m[[1]][1],m[[1]][2])
         print(teams)
         
@@ -61,26 +62,23 @@ shinyServer(function(input, output,session) {
     })
     
     output$IPLMatch2TeamsPlot <- renderPlot({  
-        m <- strsplit(as.character(input$match2),"-")
-        print("Hello")
-        t1 <- m[[1]][1]
-        t2 <- m[[1]][2]
-        print(length(m))
-       # print(m[[1]][1])
-       # print(m[[1]][2])
+        p <- strsplit(as.character(input$match2),"-")
+        #print(p[[1]][1])
+        #print(p[[1]][2])
         
-        #teams <- c(t1,t2)
-        teams <- c("Chennai Super Kings","Deccan Chargers")
-        print(teams)
+        teams2 <- c(p[[1]][1],p[[1]][2])
+        print(teams2)
+     
+        #teams2=c("Chennai Super Kings","Deccan Chargers")
         
         # Load all IPL batsmen
         output$selectTeam2 <- renderUI({ 
-            selectInput('team2', 'Choose team',choices=teams,selected=input$team2)
+            selectInput('team2', 'Choose team',choices=teams2,selected=input$team2)
         })
         
-        otherTeam = setdiff(teams,input$team2)
+        otherTeam = setdiff(teams2,input$team2)
         
-        print("Next")
+        #print("Next")
         print(otherTeam)
         print(input$team2)
         analyzeIPLMatches2Teams(input$match2,input$matches2TeamFunc,input$team2,otherTeam)
@@ -101,4 +99,6 @@ shinyServer(function(input, output,session) {
         analyzeIPLTeamPerfOverall(input$teamMatches,input$overallperfFunc,n[[1]][2],input$rank)
         
     })
+    
+    
 })

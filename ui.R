@@ -11,7 +11,9 @@ source("data.R")
 source("definitions.R")
 source("funcs.R")
 
+
 shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
+                   
                    # Batsman tab
                    
                    tabPanel("IPL batsman",
@@ -77,6 +79,7 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                             )
                             
                    ),
+                
                    
                    # Analyze 2 Teams IPL matches
                    tabPanel("Head to head",
@@ -100,7 +103,6 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                             ) 
                             
                    ),
-                   
                    # Analyze IPL Team Overall Perf
                    tabPanel("Overall Performance",
                             
@@ -124,6 +126,8 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                             
                             
                    ),
+                   
+                  
                    tabPanel("About",
                             h2("Sixer - cricketr's Shiny avatar"),
                             p("This Shiny app is based on the R package 'cricketr'. In this Shiny app, I use  the

@@ -1,3 +1,4 @@
+
 analyzeIPLMatches2Teams <- function(match2,matchFunc,team,opposition) {
     
     # Check and get the team indices of IPL teams in which the bowler has played
@@ -9,9 +10,10 @@ analyzeIPLMatches2Teams <- function(match2,matchFunc,team,opposition) {
     
     print(matchFunc)
     print(dim(matchesDF))
+   
     print(team)
     print(opposition)
-    
+    print(getwd())
     if(matchFunc == "Team Batting Scorecard All Matches"){
         teamBattingScorecardOppnAllMatches(matchesDF,team)
     } else if (matchFunc == "Team Batsmen Batting Partnerships All Matches"){
@@ -31,6 +33,8 @@ analyzeIPLMatches2Teams <- function(match2,matchFunc,team,opposition) {
     } else if (matchFunc == "Win Loss All Matches"){
         plotWinLossBetweenTeams(team,opposition,"./IPLmatches")
     }
+    
+    
    
     
 }
