@@ -11,7 +11,7 @@
 IPLBatsmanFuncs <- c("Batsman Runs vs. Deliveries",
                        "Batsman's Fours & Sixes",
                        "Dismissals of batsman",
-                       "Batsman's Runs vs StrikeRate",
+                       "Batsman's Runs vs Strike Rate",
                        "Batsman's Moving Average",
                        "Batsman's Cumulative Average Runs",
                        "Batsman's Cumulative Strike Rate",
@@ -26,17 +26,16 @@ IPLBowlerFuncs <- c("Mean Economy Rate of bowler",
                      "Mean runs conceded by bowler",
                      "Bowler's Moving Average",
                      "Bowler's Cumulative Avg. Wickets",
-                     "Bowler's Cumulative Avg. Econonmy Rate",
+                     "Bowler's Cumulative Avg. Economy Rate",
                      "Bowler's Wicket Plot",
                      "Bowler's Wickets against opposition",
-                     "Bowler's Wickets ar Venues",
+                     "Bowler's Wickets at Venues",
                      "Bowler's wickets prediction")
 
 
 # Functions to analyze IPL matches
 IPLMatchFuncs <- c("Batting Partnerships",
                    "Batsmen vs Bowlers",
-                   'Bowling Scorecard',
                    "Bowling Wicket Kind",
                    "Bowling Wicket Runs",
                    "Bowling Wicket Match",

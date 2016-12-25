@@ -23,7 +23,7 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                                 plotOutput('batsmanPlot'),
                                 column(7, offset=4,
                                        tags$h5((tags$i("Designed and developed by Tinniam V Ganesh"))),
-                                       tags$h5((tags$i("Dec 24,2016"))),
+                                       tags$h5((tags$i("Dec 25,2016"))),
                                        tags$h6("Data source Cricsheet: http://cricsheet.org/")
                                 )
                             )
@@ -44,14 +44,14 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                                 plotOutput('bowlerPlot'),
                                 column(7, offset=4,
                                        tags$h5((tags$i("Designed and developed by Tinniam V Ganesh"))),
-                                       tags$h5((tags$i("Dec 24,2016"))),
+                                       tags$h5((tags$i("Dec 25,2016"))),
                                        tags$h6("Data source Cricsheet: http://cricsheet.org/")
                                 )
                             )
                             
                    ),
                    # Analyze IPL matches
-                   tabPanel("IPL matches",
+                   tabPanel("IPL Match",
                             headerPanel('Analyze an IPL match'),
                             sidebarPanel(
                                 selectInput('matchFunc', 'Select match function', IPLMatchFuncs),
@@ -63,7 +63,7 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                                 plotOutput('IPLMatchPlot'),
                                 column(7, offset=4,
                                        tags$h5((tags$i("Designed and developed by Tinniam V Ganesh"))),
-                                       tags$h5((tags$i("Dec 24,2016"))),
+                                       tags$h5((tags$i("Dec 25,2016"))),
                                        tags$h6("Data source Cricsheet: http://cricsheet.org/")
                                 )
                             )
@@ -81,7 +81,7 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                                 plotOutput('IPLMatch2TeamsPlot'),
                                 column(7, offset=4,
                                        tags$h5((tags$i("Designed and developed by Tinniam V Ganesh"))),
-                                       tags$h5((tags$i("Dec 24,2016"))),
+                                       tags$h5((tags$i("Dec 25,2016"))),
                                        tags$h6("Data source Cricsheet: http://cricsheet.org/")
                                 )
                             ) 
@@ -99,7 +99,7 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                                 plotOutput('IPLTeamPerfOverall'),
                                 column(7, offset=4,
                                        tags$h5((tags$i("Designed and developed by Tinniam V Ganesh"))),
-                                       tags$h5((tags$i("Dec 24,2016"))),
+                                       tags$h5((tags$i("Dec 25,2016"))),
                                        tags$h6("Data source Cricsheet: http://cricsheet.org/")
                                 )
                             ) 
