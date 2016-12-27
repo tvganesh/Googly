@@ -25,7 +25,7 @@ analyzeIPLBowlers <- function(IPLBowler,func) {
           df <- getBowlerWicketDetails(team=teamNames[i],name=IPLBowler,dir="./data")
           bowlerDF <- rbind(bowlerDF,df) 
           # The below 2 lines for Bowler's wicket prediction
-          df1 <- getDeliveryWickets(team=teamNames[i],dir="./IPLMatches",name=IPLBowler,save=FALSE)
+          df1 <- getDeliveryWickets(team=teamNames[i],dir="./IPLmatches",name=IPLBowler,save=FALSE)
           bowlerDF1 <- rbind(bowlerDF1,df1)
     }
  
