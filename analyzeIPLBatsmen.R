@@ -32,7 +32,7 @@ analyzeIPLBatsmen <- function(IPLBatsman,func) {
     # Call the approporiate function
     if(func == "Batsman Runs vs. Deliveries"){
         batsmanRunsVsDeliveries(batsmanDF,IPLBatsman)
-    } else if (func == "Batsman's Fours & Sixes"){
+    } else if (func == "Predict runs of batsman"){
         batsmanRunsPredict(batsmanDF,IPLBatsman)
     }     else if (func == "Dismissals of batsman"){
         batsmanDismissals(batsmanDF,IPLBatsman)

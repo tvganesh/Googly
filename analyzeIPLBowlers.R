@@ -33,13 +33,13 @@ analyzeIPLBowlers <- function(IPLBowler,func) {
         bowlerMovingAverage(bowlerDF,IPLBowler)
     } else if (func == "Bowler's Cumulative Avg. Wickets"){
         bowlerCumulativeAvgWickets(bowlerDF,IPLBowler)
-    } else if (func == "Bowler's Cumulative Avg. Econonmy Rate"){
+    } else if (func == "Bowler's Cumulative Avg. Economy Rate"){
         bowlerCumulativeAvgEconRate(bowlerDF,IPLBowler)
     } else if (func == "Bowler's Wicket Plot"){
         bowlerWicketPlot(bowlerDF,IPLBowler)
     } else if (func == "Bowler's Wickets against opposition"){
         bowlerWicketsAgainstOpposition(bowlerDF,IPLBowler)
-    } else if (func == "Bowler's Wickets ar Venues"){
+    } else if (func == "Bowler's Wickets at Venues"){
         bowlerWicketsVenue(bowlerDF,IPLBowler)
     } else if (func == "Bowler's wickets prediction"){
         bowlerWktsPredict(bowlerDF,IPLBowler)
