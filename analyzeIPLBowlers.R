@@ -18,10 +18,15 @@ analyzeIPLBowlers <- function(IPLBowler,func) {
     # Check if file exists in the directory. This check is necessary when moving between matchType
     
     bowlerDF <- NULL
+    # This is for the function wicket predict
+    bowlerDF1 <- NULL
     # Create a consolidated Data frame of batsman for all IPL teams played
     for (i in seq_along(teamNames)){
           df <- getBowlerWicketDetails(team=teamNames[i],name=IPLBowler,dir="./data")
           bowlerDF <- rbind(bowlerDF,df) 
+          # The below 2 lines for Bowler's wicket prediction
+          df1 <- getDeliveryWickets(team=teamNames[i],dir="./IPLMatches",name=IPLBowler,save=FALSE)
+          bowlerDF1 <- rbind(bowlerDF1,df1)
     }
  
     # Call the necessary function
@@ -42,7 +47,8 @@ analyzeIPLBowlers <- function(IPLBowler,func) {
     } else if (func == "Bowler's Wickets at Venues"){
         bowlerWicketsVenue(bowlerDF,IPLBowler)
     } else if (func == "Bowler's wickets prediction"){
-        bowlerWktsPredict(bowlerDF,IPLBowler)
+        bowlerWktsPredict(bowlerDF1,IPLBowler)
+        
     }
 
 }

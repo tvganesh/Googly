@@ -15,6 +15,7 @@ source("funcs.R")
 shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                    # Batsman tab
                    tabPanel("IPL batsman",
+                            headerPanel('Analyze IPL batsman performances'),
                             sidebarPanel(
                                 selectInput('batsmanFunc', 'Select function', IPLBatsmanFuncs),
                                 selectInput('batsman', 'Select batsman', IPLBatsmen,selectize=FALSE, size=20)
@@ -31,8 +32,8 @@ shinyUI(navbarPage("Googly : yorkr analyzes IPL!",
                    ),
                    # Bowlers tab
                    tabPanel("IPL bowlers",
-                            # Application title
-                            headerPanel('Analyze IPL batsman performances'),
+                            
+                            headerPanel('Analyze IPL bowler performances'),
                             
                             sidebarPanel(
                                 selectInput('bowlerFunc', 'Select function', IPLBowlerFuncs),
