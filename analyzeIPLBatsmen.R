@@ -36,7 +36,7 @@ analyzeIPLBatsmen <- function(IPLBatsman,func) {
         batsmanRunsPredict(batsmanDF,IPLBatsman)
     }     else if (func == "Dismissals of batsman"){
         batsmanDismissals(batsmanDF,IPLBatsman)
-    } else if (func == "Batsman's Runs vs StrikeRate"){
+    } else if (func == "Batsman's Runs vs Strike Rate"){
         batsmanRunsVsStrikeRate(batsmanDF,IPLBatsman)
     } else if (func == "Batsman's Moving Average"){
         batsmanMovingAverage(batsmanDF,IPLBatsman)
